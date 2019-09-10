@@ -25,8 +25,7 @@
 	$reID = mysqli_query($link, "SELECT MIN(StartTime) FROM rooma")->fetch_array();
 	$newID = $reID[0];
 	$TimeID = 1;
-	$countTime = mysqli_query($link,"SELECT COUNT(StartTime) FROM space.".$sroom)->fetch_array();
-	for($id=1;$id<=$countTime;$id++){
+	for($id=1;$id<=24;$id++){
 		$result = mysqli_query($link, "SELECT EXISTS( SELECT * FROM ".$sroom." WHERE StartTime = '".$newID."')")->fetch_array();
 		if($result[0]==1){
 			mysqli_query($link, "UPDATE ".$sroom." SET TimeID = '".$TimeID."' WHERE StartTime = '".$newID."'");

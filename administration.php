@@ -28,7 +28,7 @@
 					<option value="21">21:00</option>
 					<option value="22">22:00</option>
 				 </select><br>
-		修改剩餘座位 ：<input type="text" name="remainedseat" style="width:30px;">
+		更新剩餘座位 ：<input type="text" name="remainedseat" style="width:30px;">
 		<button οnclick="update()"/>更新</button><br>
 	</form>
 </body>

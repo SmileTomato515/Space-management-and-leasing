@@ -61,7 +61,7 @@ mysqli_query($link,'set names utf8');	//db coding
 						if($b == 0){
 						$timeresult = mysqli_query($link, "SELECT StartTime FROM `rooma` WHERE TimeID='".$a."'");
 						$time = $timeresult->fetch_array();
-						echo "<td>$time[0]:00</td>";
+						echo "<td align='right'>$time[0]:00</td>";
 						}elseif($b == 1){
 							$remainedresult = mysqli_query($link, "SELECT RemainedSeat FROM `rooma` WHERE TimeID='".$a."'");
 							$remained = $remainedresult->fetch_array();
@@ -75,7 +75,7 @@ mysqli_query($link,'set names utf8');	//db coding
 		}
 	?>
 	<form name="administer" method="post" action="update.php">
-		選擇時段 : <select name="updateTime">
+		更新時段 : <select name="updateTime">
 					<option value="null"></option>
 					<?php 
 						for($i=1;$i<=24;$i++){
